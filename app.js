@@ -11,7 +11,7 @@ app.use(bodyParser.json({limit: '50mb'}));
 const mongoose = require('mongoose');
 mongoose.Promise = global.Promise;
 
-mongoose.connect(process.db, {
+mongoose.connect(process.env.db, {
     useNewUrlParser: true,
     useFindAndModify: false,
     useUnifiedTopology: true
