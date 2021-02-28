@@ -21,7 +21,9 @@ mongoose.connect(process.db, {
     console.log('Could not connect to the database. Exiting now...', err);
     process.exit();
 });
-
+app.get('', (req,res) => {
+  res.send('API is running');
+})
 require('./routes')(app);
 global.models = require('./models/index');
 
